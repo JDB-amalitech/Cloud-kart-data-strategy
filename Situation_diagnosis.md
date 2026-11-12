@@ -18,19 +18,6 @@ These workloads compete for the same computer resources, including memory, proce
 How the problem happens
 One shared server
 
-MySQL database + live website
-
-Customer orders
-
-Needs fast responses
-
-
-Monday exports
-
-Uses significant resources
-
-
-
 Resource competition
 Website becomes slow
 
