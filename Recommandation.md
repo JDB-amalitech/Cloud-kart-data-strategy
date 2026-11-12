@@ -78,4 +78,4 @@ This architecture separates analytical reporting from the live website, gives Fi
 
 The company should not spend on a lakehouse, full real-time dashboards, machine learning or expensive cloud warehouse subscriptions yet. These are future options, not immediate requirements.
 
-**The priority is to build a reliable data foundation that fits Kloud Kart's current size, protects its operations and can grow with the business.**
+The priority is to build a reliable data foundation that fits Kloud Kart's current size, protects its operations and can grow with the business.
