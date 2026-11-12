@@ -16,7 +16,7 @@ The proposed data flow is:
 | MySQL Production | Handles live website operations, orders, payments, customers and inventory. |
 | MySQL Read Replica | Receives a copy of production data and provides a separate source for reporting extraction. |
 | Python ETL Pipeline | Automatically extracts, cleans, validates and transforms data. |
-|  Data Warehouse | Stores organised historical data for business analysis across Ghana and Nigeria. |
+|  Data Warehouse(in the future) | Stores organised historical data for business analysis across Ghana and Nigeria. |
 | Power BI | Presents sales, finance, customer and regional performance dashboards. |
 
 The warehouse will organise information into reporting-friendly tables, including sales, products, customers, dates and locations. This will allow management to compare business performance across both countries.
