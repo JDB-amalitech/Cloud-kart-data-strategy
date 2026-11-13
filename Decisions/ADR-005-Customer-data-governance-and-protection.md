@@ -1,8 +1,8 @@
 # ADR-005: Introduce controlled customer-data exports and deletion tracking
 
-- **Status:** Accepted
+- **Status:** Proposed (for client review)
 - **Date:** 2026-11-13
-- **Decision owner:** Proposed: Kloud Kart leadership, with the Data Analyst/BI Developer coordinating governance activities and management retaining privacy accountability.
+- **Decision owner:** Kloud Kart leadership, with the Data Analyst/BI Developer coordinating governance activities and management retaining privacy accountability.
 
 ## Context
 
@@ -33,7 +33,7 @@ The process will include:
 
 The existing Data Protection Commission complaint must be investigated, documented and responded to within the stated deadline, with appropriate privacy and legal support.
 
-Management will retain responsibility for privacy accountability. The BI and Data Governance Analyst will coordinate records and controls, while the Data Engineer and existing developer support technical implementation.
+Management will retain responsibility for privacy accountability. The Data Analyst/BI Developer will coordinate records and controls, while the Data Engineer and existing developer support technical implementation.
 
 ## Alternatives considered
 

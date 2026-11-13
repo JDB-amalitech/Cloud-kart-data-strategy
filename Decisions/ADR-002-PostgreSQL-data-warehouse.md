@@ -1,8 +1,8 @@
 # ADR-002: Introduce a PostgreSQL data warehouse in Q4
 
-- **Status:** Accepted
+- **Status:** Proposed (for client review)
 - **Date:** 2026-11-13
-- **Decision owner:** Proposed: Kloud Kart leadership, with the Data Engineer responsible for technical assessment and implementation.
+- **Decision owner:** Kloud Kart leadership, with the Data Engineer responsible for technical assessment and implementation.
 
 ## Context
 

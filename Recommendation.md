@@ -1,8 +1,10 @@
 # 2. Recommendation – Kloud Kart Data Strategy
 ## 2.1 Executive recommendation
 
-Kloud Kart should build a **Data warehouse**, supported by a MySQL read replica and automated Python ETL pipelines.
+Kloud Kart should adopt a **PostgreSQL data warehouse**, supported by a MySQL read replica and automated Python ETL pipelines. The read replica and Python ETL come first (Q1); the warehouse is introduced in Q4, subject to the Q3 capacity and cost review.
+
 The purpose is to separate business reporting from the live website, establish one trusted source of business information and prepare the company for expansion into Nigeria.
+
 Rather than purchasing expensive platforms such as Snowflake or BigQuery immediately, Kloud Kart should use PostgreSQL, Python and Power BI. These technologies provide the required capabilities at a more manageable cost.
 
 ## 2.2 Proposed architecture
@@ -16,7 +18,7 @@ The proposed data flow is:
 | MySQL Production | Handles live website operations, orders, payments, customers and inventory. |
 | MySQL Read Replica | Receives a copy of production data and provides a separate source for reporting extraction. |
 | Python ETL Pipeline | Automatically extracts, cleans, validates and transforms data. |
-|  Data Warehouse(in the future) | Stores organised historical data for business analysis across Ghana and Nigeria. |
+| PostgreSQL Data Warehouse (introduced in Q4) | Stores organised historical data for business analysis across Ghana and Nigeria. |
 | Power BI | Presents sales, finance, customer and regional performance dashboards. |
 
 The warehouse will organise information into reporting-friendly tables, including sales, products, customers, dates and locations. This will allow management to compare business performance across both countries.
@@ -29,7 +31,7 @@ The second server can initially host the read replica and ETL processing, with t
 
 | Option | Advantages | Decision |
 |---|---|---|
-| Data warehouse | Organises historical business data and supports consistent reporting and analysis. | **Choose now.** |
+| Data warehouse | Organises historical business data and supports consistent reporting and analysis. | **Selected** – introduced in Q4, after the Q3 review. |
 | Data lake | Stores large amounts of raw data in different formats. | Defer; current needs are mainly structured business data. |
 | Lakehouse | Combines data lake and warehouse capabilities. | Defer; additional complexity is not justified by the current team and requirements. |
 | Snowflake / BigQuery | Managed cloud warehouse services with strong scaling capabilities. | Reconsider when growth and workloads justify their recurring costs. |
@@ -68,9 +70,7 @@ For the existing Data Protection Commission complaint, Kloud Kart must investiga
 
 The company should obtain appropriate data-protection advice to confirm its obligations under Ghana's Data Protection Act, 2012 (Act 843), including requirements relevant to its Nigeria operations.
 
-
-
-## 2.7 Final recommendation
+## 2.6 Final recommendation
 
 Kloud Kart should invest in a PostgreSQL data warehouse supported by a MySQL read replica, automated Python ETL pipelines and Power BI.
 

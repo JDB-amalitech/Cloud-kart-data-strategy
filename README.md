@@ -1,24 +1,34 @@
-# Kloud Kart – Reporting and Data Management Diagrams
+# Kloud Kart – Reporting and Data Management Improvement Proposal
 
 ## Overview
 
-This folder contains supporting architecture and process diagrams for the proposed improvement of Kloud Kart's reporting, data management, system reliability and data protection.
+This repository contains a proposed plan to improve Kloud Kart's reporting, data management, website reliability and customer-data protection over the next 12 months, including preparation for the Nigeria expansion.
 
-The diagrams are designed to help management and technical staff understand the current challenges, proposed solutions and 12-month implementation roadmap.
+It is a phased **recommendation**. It does not claim that any component is already implemented.
 
-## Diagrams Included
+## Repository Structure
 
-| No. | Diagram | Purpose |
-|---|---|---|
-| 1 | Current Reporting Problem | Explains how using one MySQL server for both business operations and reporting can affect website performance. |
-| 2 | Proposed Data Architecture | Shows the proposed flow from MySQL Production through a Read Replica and Python ETL into PostgreSQL and Power BI. |
-| 3 | Proposed Data Architecture | Shows the proposed flow from MySQL Production through a Read Replica and Python ETL into PostgreSQL and Power BI. |
-| 4| Data-platform | Explains the differences between each Data platform  |
-| 5 | Monday Reporting Reconciliation | Explains the reporting validation process and the responsibilities of the technical and business teams. |
+| Path | Contents |
+|---|---|
+| `client-memo.md` | One-page cover memo to Nana: what was found, built and recommended, and what could not be stood behind. |
+| `Situation_diagnosis.md` | Root causes, business impact and risk ranking. |
+| `Recommendation.md` | Recommended architecture, technology choices and data-protection measures. |
+| `Roadmap.md` | 12-month implementation roadmap with outcomes Nana can verify each quarter. |
+| `Decisions/` | Six Architecture Decision Records (ADR-001 to ADR-006), all currently **Proposed** pending client review. |
+| `Decisions/improvement/improvement.md` | 12-month improvement plan for the existing PHP/MySQL developer. |
+| `Diagrams/` | Supporting diagrams (see below). |
+
+## Diagrams
+
+| File | Purpose |
+|---|---|
+| `Current_setup.png` | Today's set-up: one MySQL server serving the website, Nana and Finance. |
+| `kloud_kart_proposed_data_architecture.png` | Proposed flow from MySQL production through a read replica and Python ETL to the data warehouse and Power BI. |
+| `Implementation_Roadmap.png` | The 12-month roadmap on one page, with the target data flow. |
+| `Datawarehouse.png` | Illustration of how a data warehouse works. |
+| `Datalake.png` | Illustration of a data lake architecture, used to explain why a lake was deferred. Third-party image: see "Image sources" below. |
 
 ## Proposed Data Architecture
-
-The recommended reporting architecture is:
 
 ```text
 MySQL Production
@@ -36,9 +46,9 @@ PostgreSQL Data Warehouse
 Power BI
 ```
 
-**Important:** The read replica is prioritised in Q1. PostgreSQL warehouse implementation is planned for Q4, subject to the Q3 infrastructure, capacity and cost assessment.
+**Important:** The read replica is prioritised in Q1. The PostgreSQL data warehouse is planned for Q4, subject to the Q3 infrastructure, capacity and cost assessment.
 
-Live website transactions and stock availability checks will continue using the production MySQL database.
+Live website transactions and stock availability checks continue to use the production MySQL database.
 
 ## Implementation Roadmap
 
@@ -54,26 +64,21 @@ Live website transactions and stock availability checks will continue using the 
 | MySQL | Existing operational database |
 | MySQL Read Replica | Separates reporting reads from production workloads |
 | Python | Data extraction, transformation and validation |
-| PostgreSQL | Central reporting data warehouse |
+| PostgreSQL | Central reporting data warehouse (Q4, subject to Q3 review) |
 | Power BI | Dashboards and management reporting |
-| Draw.io | Architecture and process diagrams |
-
-## How to Open and Edit the Diagrams
-
-1. Click on diagrams folder
-2. Select the diagrams from the dropdown list 
-3. Double click it to open
-
-
-You can also export diagrams as PNG, SVG or PDF for inclusion in reports and presentations.
 
 ## Important Considerations
 
-- The proposed architecture is a phased recommendation, not a claim that all components are already implemented.
-- PostgreSQL procurement should follow the Q3 assessment.
-- Data protection controls require appropriate policies, implementation and qualified professional advice.
+- PostgreSQL procurement follows the Q3 assessment.
+- Infrastructure costs need supplier quotations; system capacity needs workload testing.
+- Data protection controls require appropriate policies, implementation and qualified professional advice. A register alone does not establish compliance.
+- Cross-border processing for Nigeria needs legal and regulatory assessment.
 - The Monday reconciliation process should be aligned with the company's actual reporting template and Finance's approved definitions.
 - Forecasting and advanced analytics should only be introduced when reliable data and a clear business need justify them.
+
+## Image sources
+
+`Datalake.png` carries an Altexsoft logo and appears to be taken from Altexsoft's published material. Cite it (source and URL) or replace it with an original diagram before the repository is shared beyond the client.
 
 ## Prepared By
 

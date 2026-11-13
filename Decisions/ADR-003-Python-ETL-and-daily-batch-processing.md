@@ -1,8 +1,8 @@
 # ADR-003: Adopt daily batch processing and incremental Python ETL for business reporting
 
-- **Status:** Accepted
+- **Status:** Proposed (for client review)
 - **Date:** 2026-11-13
-- **Decision owner:** Proposed: Kloud Kart leadership, with the Data Engineer responsible for implementation.
+- **Decision owner:** Kloud Kart leadership, with the Data Engineer responsible for implementation.
 
 ## Context
 

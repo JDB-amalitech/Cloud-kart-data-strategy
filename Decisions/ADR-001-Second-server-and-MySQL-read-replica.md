@@ -1,8 +1,8 @@
 # ADR-001: Separate reporting workloads using a second server and MySQL read replica
 
-- **Status:** Accepted
+- **Status:** Proposed (for client review)
 - **Date:** 2026-11-13
-- **Decision owner:** Proposed: Kloud Kart leadership, with the Data Engineer responsible for implementation.
+- **Decision owner:** Kloud Kart leadership, with the Data Engineer responsible for implementation.
 
 ## Context
 
@@ -34,17 +34,17 @@ The Data Engineer will configure replication monitoring, backup arrangements and
 - **Why it is attractive:** It avoids additional infrastructure and implementation costs.
 - **Why rejected:** Reporting activities have already caused two website slowdowns. Continuing this approach exposes the company to further performance problems.
 
-### Alternative B: Move all reporting directly into a PostgreSQL warehouse immediately
-
-- **How it would work:** Procure and configure PostgreSQL as a dedicated reporting environment immediately.
-- **Why it is attractive:** It provides a separate analytical database and supports historical reporting.
-- **Why rejected:** Although PostgreSQL is the recommended long-term solution, immediate procurement would increase initial expenditure before the company has established the reporting pipeline and assessed its actual capacity requirements.
-
-### Alternative C: Introduce a second server with a MySQL read replica
+### Alternative B: Introduce a second server with a MySQL read replica
 
 - **How it would work:** Replicate production data to the second server and use it for reporting extraction and analytical processing.
 - **Why it is attractive:** It separates reporting workloads from live transactions while making use of already approved infrastructure.
 - **Why selected:** It directly addresses the existing performance problem and provides a practical first step towards the proposed data warehouse architecture.
+
+### Alternative C: Move all reporting directly into a PostgreSQL warehouse immediately
+
+- **How it would work:** Procure and configure PostgreSQL as a dedicated reporting environment immediately.
+- **Why it is attractive:** It provides a separate analytical database and supports historical reporting.
+- **Why rejected:** Although PostgreSQL is the recommended long-term solution, immediate procurement would increase initial expenditure before the company has established the reporting pipeline and assessed its actual capacity requirements.
 
 ## Consequences
 
@@ -56,7 +56,5 @@ The Data Engineer will configure replication monitoring, backup arrangements and
 ## What this survives
 
 This decision survives pressure to build the entire analytical platform immediately.
-
 The company has a confirmed production performance problem and an approved second server. Separating reporting workloads is the most direct intervention.
-
 The read replica is an initial reporting solution, not a replacement for the planned PostgreSQL data warehouse in Q4.

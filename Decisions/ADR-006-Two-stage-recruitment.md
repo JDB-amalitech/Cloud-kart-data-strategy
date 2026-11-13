@@ -1,8 +1,8 @@
 # ADR-006: Recruit a Data Engineer in Month 1 and a Data Analyst/BI Developer in Month 4
 
-- **Status:** Accepted
+- **Status:** Proposed (for client review)
 - **Date:** 2026-11-13
-- **Decision owner:** Proposed: Kloud Kart leadership.
+- **Decision owner:** Kloud Kart leadership.
 
 ## Context
 

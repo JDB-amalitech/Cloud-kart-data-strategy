@@ -1,8 +1,8 @@
 # ADR-004: Keep customer-facing stock availability on the primary MySQL database
 
-- **Status:** Accepted
+- **Status:** Proposed (for client review)
 - **Date:** 2026-11-13
-- **Decision owner:** Proposed: Kloud Kart leadership, with the existing PHP/MySQL developer responsible for website integration.
+- **Decision owner:** Kloud Kart leadership, with the existing PHP/MySQL developer responsible for website integration.
 
 ## Context
 

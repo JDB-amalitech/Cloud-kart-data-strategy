@@ -39,15 +39,7 @@ The developer must support the accuracy of operational data used for Monday mana
 
 **Reporting workflow:**
 
-**MySQL Production**
-
-**MySQL Read Replica**
-
-**Python ETL and Validation**
-
-**PostgreSQL Data Warehouse**
-
-**Power BI Reports**
+**MySQL Production → MySQL Read Replica → Python ETL and Validation → PostgreSQL Data Warehouse → Power BI Reports**
 
 The developer maintains reliable application records. The Data Engineer manages extraction and warehouse processes, while the Data Analyst/BI Developer manages reporting definitions and dashboards.
 
