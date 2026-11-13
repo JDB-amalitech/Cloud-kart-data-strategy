@@ -1,7 +1,7 @@
 # 2. Recommendation – Kloud Kart Data Strategy
 ## 2.1 Executive recommendation
 
-Kloud Kart should adopt a **PostgreSQL data warehouse**, supported by a MySQL read replica and automated Python ETL pipelines. The read replica and Python ETL come first (Q1); the warehouse is introduced in Q4, subject to the Q3 capacity and cost review.
+Kloud Kart should adopt a **Data warehouse**, supported by a MySQL read replica and automated Python ETL pipelines. The read replica and Python ETL come first (Q1); the warehouse is introduced in Q4, subject to the Q3 capacity and cost review.
 
 The purpose is to separate business reporting from the live website, establish one trusted source of business information and prepare the company for expansion into Nigeria.
 
@@ -11,14 +11,14 @@ Rather than purchasing expensive platforms such as Snowflake or BigQuery immedia
 
 The proposed data flow is:
 
-**MySQL Production → MySQL Read Replica → Python ETL Pipeline → PostgreSQL Data Warehouse → Power BI**
+**MySQL Production → MySQL Read Replica → Python ETL Pipeline →  Data Warehouse → Power BI**
 
 | Component | Responsibility |
 |---|---|
 | MySQL Production | Handles live website operations, orders, payments, customers and inventory. |
 | MySQL Read Replica | Receives a copy of production data and provides a separate source for reporting extraction. |
 | Python ETL Pipeline | Automatically extracts, cleans, validates and transforms data. |
-| PostgreSQL Data Warehouse (introduced in Q4) | Stores organised historical data for business analysis across Ghana and Nigeria. |
+| Data Warehouse (introduced in Q4) | Stores organised historical data for business analysis across Ghana and Nigeria. |
 | Power BI | Presents sales, finance, customer and regional performance dashboards. |
 
 The warehouse will organise information into reporting-friendly tables, including sales, products, customers, dates and locations. This will allow management to compare business performance across both countries.
@@ -72,9 +72,9 @@ The company should obtain appropriate data-protection advice to confirm its obli
 
 ## 2.6 Final recommendation
 
-Kloud Kart should invest in a PostgreSQL data warehouse supported by a MySQL read replica, automated Python ETL pipelines and Power BI.
+Kloud Kart should invest in a Data warehouse supported by a MySQL read replica, automated Python ETL pipelines and Power BI.
 
-This architecture separates analytical reporting from the live website, gives Finance and Operations a consistent source of business figures, and supports comparisons between Ghana and Nigeria.
+This architecture separates analytical reporting from the live website, gives Finance and Operations a consistent source of business figures
 
 The company should not spend on a lakehouse, full real-time dashboards, machine learning or expensive cloud warehouse subscriptions yet. These are future options, not immediate requirements.
 
